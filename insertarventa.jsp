@@ -1,32 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<!-- paquete de caracteres -->
-<meta charset="utf-8">
-<!-- Tamaño de la pantalla -->
-<meta name="viewport" content="width=device-width">
-<!-- titulo de la pestaña -->
-<title>Registrar venta</title>
-<!-- bootstrap-->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-	crossorigin="anonymous">
+	<!-- paquete de caracteres -->
+	<meta charset="utf-8">
+	<!-- Tamaño de la pantalla -->
+	<meta name="viewport" content="width=device-width">
+	<!-- titulo de la pestaña -->
+	<title>Registrar venta</title>
+	<!-- bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	 crossorigin="anonymous">
 
-<!-- font awesome -->
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-	crossorigin="anonymous">
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+	 crossorigin="anonymous">
 
-<!-- Cargando mi hoja de estilo -->
-<link href="style.css" rel="stylesheet" type="text/css" />
+	<!-- Cargando mi hoja de estilo -->
+	<link href="style.css" rel="stylesheet" type="text/css" />
 
 
-<!--    
+	<!--    
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
 	crossorigin="anonymous"></script>
@@ -37,8 +32,8 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   -->
-<script>
-	window.onload = function() {
+	<script>
+		window.onload = function() {
 		var req = new XMLHttpRequest();
 		req.open('GET', 'http://localhost:8080/contadorventa', false);
 		req.send(null);
@@ -48,7 +43,8 @@
 		console.log(cont.toString());
 		document.getElementById("consecutivo").value = cont;
 	};
-</script>
+
+	</script>
 </head>
 
 <body background="https://cdn.pixabay.com/photo/2016/02/17/19/08/lotus-1205631_960_720.jpg" opacity=0.5>
@@ -57,29 +53,29 @@
 		<div class="container-fluid">
 			<a class="navbar-brand links" href="index.html"><i class="fas fa-chalkboard-teacher"></i>Tienda Tecnologica</a>
 			<nav class="navbar navbar-dark bg-dark">
-		<div class="container">
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listausuarios.jsp'">
-			<i class="fas fa-users"></i> Usuarios</button>
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaclientes.jsp'">
-			<i class="fas fa-address-book"></i> Clientes</button>
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaproveedores.jsp'">
-			<i class="fas fa-truck"></i> Proveedores</button>
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaproductos.jsp'">
-			<i class="fas fa-apple-alt"></i> Productos</button>
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaventas.jsp'">
-			<i class="fas fa-money-check-alt"></i> Ventas</button>
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listareportes.jsp'">
-			<i class="fas fa-clipboard-list"></i> Reportes</button>
-		</div>
-	</nav>
+        <div class="container">
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listausuarios.jsp'">
+        <i class="fas fa-users"></i> Usuarios</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaclientes.jsp'">
+        <i class="fas fa-address-book"></i> Clientes</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaproveedores.jsp'">
+        <i class="fas fa-truck"></i> Proveedores</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaproductos.jsp'">
+        <i class="fas fa-apple-alt"></i> Productos</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaventas.jsp'">
+        <i class="fas fa-money-check-alt"></i> Ventas</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listareportes.jsp'">
+        <i class="fas fa-clipboard-list"></i> Reportes</button>
+        </div>
+	    </nav>
 		</div>
 	</nav>
 
-<!-- card de registro-->
-	<div id="layoutSidenav_content">
+
+	<!--<div id="layoutSidenav_content">
 		<main>
 
-		<!--	<div w3-include-html="snippets/sidenav.html"></div>
+			<div w3-include-html="snippets/sidenav.html"></div>
 
 			<div
 				class="container-fluid px-4 animate__animated animate__bounceInLeft">
@@ -89,123 +85,112 @@
 				</ol>
 
 -->
-		<div style="padding-left: 5px">
+	<div style="padding-left: 5px">
 		<h3 class="card-header">Registrar una nueva venta</h3>
-		<div class="container">
-					
-							 
-						</div>
+		<div class="container"></div>
 
 				<!--<div class="card bg-dark text-white">
         <img class="card-img" src="https://cdn.pixabay.com/photo/2016/02/17/19/08/lotus-1205631_960_720.jpg" opacity=0.7 alt="Card image">
         <div class="card-img-overlay">-->
 
-							<h2>
-								Numero de registro
-							</h2>
+			<h3>Numero de registro</h3>
 <!--genera el consecutivo de la venta -->
-							<form>
-								<div class="col-xl-4 col-lg-4 col-md-5 col-sm-5">
-									<div class="input-group input-group-sm mb-3">
-										<span class="input-group-text" id="basic-addon1">Consecutivo</span>
-										<input type="text" class="form-control" readonly="readonly"
-											id="consecutivo">
-									</div>
-								</div>
+      <form>
+				<div class="col-xl-4 col-lg-4 col-md-5 col-sm-5">
+					<div class="input-group input-group-sm mb-3">
+						<span class="input-group-text" id="basic-addon1">Consecutivo</span>
+							<input type="text" class="form-control" readonly="readonly"
+							id="consecutivo">
+					</div>
+				</div>
 <!-- busqueda del cliente para la venta -->
-								<h3>Datos del cliente</h3>
-								<div class="row ">
-									<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text"> <i id="checkcliente"
-												class="fas fa-times text-danger"></i></span> <span
-												class="input-group-text" id="basic-addon1">Cedula
-												</span> <input type="text" class="form-control"
-												  id="cedula_cliente">										 
-                           <button type="button" class="btn btn-info text-white"
-											    onclick="traerNombreCliente()">
-										  	<i class="fas fa-search"></i>
-									  	</button>                         
-										</div>
-									</div>
-									<div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text" id="basic-addon1">Nombre</span>
-											<input type="text" class="form-control" readonly="readonly"
-												id="nombre_cliente">
-										</div>
-									</div>
-								</div>
+				<h3>Datos del cliente</h3>
+				<div class="row ">
+					<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text"> <i id="checkcliente"
+								class="fas fa-times text-danger"></i></span> <span
+								class="input-group-text" id="basic-addon1">Cedula</span>
+                <input type="text" class="form-control" id="cedula_cliente">										 
+                <button type="button" class="btn btn-info text-white"
+								onclick="traerNombreCliente()"><i class="fas fa-search"></i>
+								</button>                         
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="basic-addon1">Nombre</span>
+								<input type="text" class="form-control" readonly="readonly"
+								id="nombre_cliente">
+						</div>
+					</div>
+				</div>
 
-								<div class="border-top "></div>
+			  <div class="border-top "></div>
 <!--Buscar usuario -->
-                  <h3>Datos del Usuario</h3>
-								<div class="row ">
-									<div class="col-xl-3 col-lg-4 col-md-4 col-sm-5">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text"><i id="checkusuario"
-												class="fas fa-times text-danger"></i></span> <span
-												class="input-group-text" id="basic-addon1">Usuario </span> 
-                        <input type="text" class="form-control"
-												id="cedula_usuario">
-                          <button type="button" class="btn btn-info text-white"
-											    onclick="traerNombreUsuario()">
-										  	<i class="fas fa-search"></i>
-									  	</button> 
-										</div>
-									</div>
-									<div class="col-xl-9 col-lg-8 col-md-8 col-sm-7">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text" id="basic-addon1">Nombre</span>
-											<input type="text" class="form-control" readonly="readonly"
-												id="nombre_usuario">
-										</div>
-									</div>
-								</div>
-								<div class="border-top"></div>
-
-								<h3>Detalle de la venta</h3>
-
+        <h3>Datos del Usuario</h3>
+				<div class="row ">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text"><i id="checkusuario"
+								class="fas fa-times text-danger"></i></span> <span
+								class="input-group-text" id="basic-addon1">Usuario </span> 
+                  <input type="text" class="form-control"
+									id="cedula_usuario">
+                <button type="button" class="btn btn-info text-white"
+								onclick="traerNombreUsuario()"><i class="fas fa-search"></i>
+								</button> 
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-8 col-sm-7">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="basic-addon1">Nombre</span>
+								<input type="text" class="form-control" readonly="readonly"
+								id="nombre_usuario">
+						</div>
+					</div>
+				</div>  
+					<div class="border-top"></div>
+					<h3>Detalle de la venta</h3>
 <!-- Producto 1 -->
-								<div class="row ">
-									<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text"><i id="checkitem1"
-												class="fas fa-times text-danger"></i></span> <span
-												class="input-group-text" id="basic-addon1">Cod.</span> <input
-												type="text" class="form-control" id="codigo_producto1">
-                        <button type="button" class="btn btn-info text-white"
-											  onclick="cargarProducto1()">
-											<i class="fas fa-search"></i>
-										</button>
-										</div>
-									</div>
-									<div class="col-xl-3 col-lg-3 col-md-7 col-sm-7">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text" id="basic-addon1">Nombre</span>
-											<input type="text" class="form-control" id="nombre_producto1"
-												readonly="readonly">
-										</div>
-									</div>
+				<div class="row ">
+					<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text"><i id="checkitem1"
+								class="fas fa-times text-danger"></i></span> <span
+								class="input-group-text" id="basic-addon1">Cod.</span> <input
+								type="text" class="form-control" id="codigo_producto1">
+              <button type="button" class="btn btn-info text-white"
+							onclick="cargarProducto1()"><i class="fas fa-search"></i>
+							</button>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-7 col-sm-7">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="basic-addon1">Nombre</span>
+								<input type="text" class="form-control" id="nombre_producto1"
+								readonly="readonly">
+						</div>
+					</div>
 
-									<div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text" id="basic-addon1">Cant.</span>
-											<input type="text" class="form-control" id="cant1"
-												oninput="calcularPrecio1()">
-										</div>
-									</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-4">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="basic-addon1">Cant.</span>
+								<input type="text" class="form-control" id="cant1"
+								oninput="calcularPrecio1()">
+						</div>
+					</div>
 
-									<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-										<div class="input-group input-group-sm mb-3">
-											<span class="input-group-text" id="basic-addon1">Precio</span> 
-                      <input type="text" class="form-control" id="valtotal1"
-												readonly="readonly" value="0">
-										</div>
-									</div>
-								</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+						<div class="input-group input-group-sm mb-3">
+							<span class="input-group-text" id="basic-addon1">Precio</span> 
+                <input type="text" class="form-control" id="valtotal1"
+								readonly="readonly" value="0">
+						</div>
+					</div>
+				</div>
 <!-- producto 2 -->
-								<div class="row ">
+				<div class="row ">
 									<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
 										<div class="input-group input-group-sm mb-3">
 											<span class="input-group-text"><i id="checkitem2"
@@ -242,10 +227,10 @@
 										</div>
 									</div>
 
-								</div>
+				</div>
 
 <!-- producto 3 -->
-								<div class="row ">
+				<div class="row ">
 									<div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
 										<div class="input-group input-group-sm mb-3">
 											<span class="input-group-text"><i id="checkitem3"
@@ -281,11 +266,11 @@
 												readonly="readonly" value="0">
 										</div>
 									</div>
-								</div>
-								<div class="border-top"></div>
-<!-- Sumatorias de la venta-->
-              
-								<div class="row justify-content-end mt-3">
+				</div>
+				<div class="border-top"></div>
+<!-- Sumatorias de la venta
+<div class="row justify-content mt-3">-->
+								
 									<div class="col-xl-3 col-lg-3 col-md-7 col-sm-8">
 										<div class="input-group input-group-sm mb-3">
 											<span class="input-group-text" id="basic-addon1">Subtotal venta</span> 
@@ -293,18 +278,14 @@
 												id="total_venta">
 										</div>
 									</div>
-								</div>
-
-								<div class="row justify-content-end mt-3">
+						
 									<div class="col-xl-3 col-lg-3 col-md-7 col-sm-8">
 										<div class="input-group input-group-sm mb-3">
 											<span class="input-group-text" id="basic-addon1">Total
 												IVA</span> <input type="text" class="form-control" id="total_iva">
 										</div>
 									</div>
-								</div >
 
-								<div class="row justify-content-end mt-3">
 									<div class="col-xl-3 col-lg-3 col-md-7 col-sm-8">
 										<div class="input-group input-group-sm mb-3">
 											<span class="input-group-text" id="basic-addon1">Total a pagar </span> 
@@ -314,14 +295,15 @@
 									</div>
 								</div>
 <!-- Aceptación de la venta-->
-								<div class="row ">
+								<div class="row justify-content-end mt-3">
 									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
 										<button type="button" class="btn btn-success"
 											onclick="registrar()">
 											<i class="fas fa-check"></i> Registrar venta
 										</button>
 									</div>
-<!-- Registrr nueva venta-->
+<!-- Registrar nueva venta-->
+                  
 									<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
 										<button type="button" class="btn btn-warning"
 											onclick="window.location.reload();">
@@ -335,10 +317,8 @@
 										<div class="alert alert-danger visually-hidden" role="alert"
 											id="error">Error al insertar datos, recargue la pagina
 											y reintente de nuevo</div>
-									</div>
-
-								</div>
-
+                	</div>
+                </div>
 							</form>
         </div>
 						</div>
@@ -646,14 +626,3 @@
 	</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

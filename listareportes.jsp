@@ -106,11 +106,11 @@
 			<div class="container">
         
 				<div class="row">
-				<a href="#" class="link" onclick="window.location.href='/listacliente.jsp'"><h5>lista Clientes</h5></a>
+				<a href="#" class="link" onclick="window.location.href='/listausuario.jsp'"><h5>lista Usuarios</h5></a>
 				</div>
 
         <div class="row">
-				<a href="#" class="link" onclick="window.location.href='/listaproductos.jsp'"><h5>lista productos</h5></a>
+				<a href="#" class="link" onclick="window.location.href='/listacliente.jsp'"><h5>Lista clientes</h5></a>
 		
 				</div>
         <div class="row">

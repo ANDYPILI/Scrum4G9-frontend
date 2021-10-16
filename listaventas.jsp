@@ -105,7 +105,7 @@
 		<center>
 			<div class="container">
 				<div class="row">
-				<a href="#" class="link" onclick="window.location.href='/registrarventa.jsp'"><h5>Registrar venta</h5></a>
+				<a href="#" class="link" onclick="window.location.href='/insertarventa.jsp'"><h5>Registrar venta</h5></a>
 		
 				</div>
 			</div>
