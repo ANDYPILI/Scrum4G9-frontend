@@ -6,9 +6,9 @@
 
 <!-- paquete de caracteres -->
 <meta charset="utf-8">
-<!-- Tama�o de la pantalla -->
+<!-- Tamaño de la pantalla -->
 <meta name="viewport" content="width=device-width">
-<!-- titulo de la pesta�a -->
+<!-- titulo de la pestaña -->
 <title>Insertando usuario</title>
 <!-- bootstrap-->
 <link
@@ -46,7 +46,7 @@
 			<i class="fas fa-truck"></i> Proveedores</button>
 			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaproductos.jsp'">
 			<i class="fas fa-apple-alt"></i> Productos</button>
-			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listaventas.jsp'">
+			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/insertarventa.jsp'">
 			<i class="fas fa-money-check-alt"></i> Ventas</button>
 			<button type="button" class="btn btn-outline-primary" onclick="window.location.href='/listareportes.jsp'">
 			<i class="fas fa-clipboard-list"></i> Reportes</button>
