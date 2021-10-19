@@ -6,10 +6,10 @@
 
 <!-- paquete de caracteres -->
 <meta charset="utf-8">
-<!-- Tamaño de la pantalla -->
+<!-- Tama�o de la pantalla -->
 <meta name="viewport" content="width=device-width">
-<!-- titulo de la pestaña -->
-<title>Lista de ventas</title>
+<!-- titulo de la pesta�a -->
+<title>Reporte usuarios</title>
 <!-- bootstrap-->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -28,32 +28,31 @@
 
 
 <script>
-	var baseurl = "http://localhost:8080/listarventa";
-	function loadventas() {
+	var baseurl = "http://localhost:8080/listarusuarios";
+	function loadusuarios() {
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", baseurl, true);
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-				var ventas = JSON.parse(xmlhttp.responseText);
-				var tbltop = "<table class='table table-dark table-striped'><tr><th>Codigo</th><th>IVA</th><th>NIT Proveedor</th><th>Nombre Producto</th><th>Precio compra</th><th>Precio venta</th></tr>";
+				var usuarios = JSON.parse(xmlhttp.responseText);
+				var tbltop = "<table class='table table-dark table-striped'><tr><th>Cedula</th><th>Email</th><th>Nombre</th><th>Password</th><th>Usuario</th></tr>";
 				var main = "";
-				for (i = 0; i < productos.length; i++) {
-					main += "<tr><td>" + productos[i].codigo_producto
-							+ "</td><td>" + productos[i].iva_compra
-							+ "</td><td>" + productos[i].nit
-							+ "</td><td>" + productos[i].nombre_producto 
-							+ "</td><td>" + productos[i].precio_compra 
-							+ "</td><td>" + productos[i].precio_venta + "</td></tr>";
+				for (i = 0; i < usuarios.length; i++) {
+					main += "<tr><td>" + usuarios[i].cedula_usuario
+							+ "</td><td>" + usuarios[i].email_usuario
+							+ "</td><td>" + usuarios[i].nombre_usuario
+							+ "</td><td>" + usuarios[i].password + "</td><td>"
+							+ usuarios[i].usuario + "</td></tr>";
 				}
 				var tblbottom = "</table>";
 				var tbl = tbltop + main + tblbottom;
-				document.getElementById("productosinfo").innerHTML = tbl;
+				document.getElementById("usuariosinfo").innerHTML = tbl;
 			}
 		};
 		xmlhttp.send();
 	}
 	window.onload = function() {
-		loadproductos();
+		loadusuarios();
 	}
 </script>
 
@@ -83,42 +82,26 @@
 	</nav>
 		</div>
 	</nav>
+
+	<!-- Navbar modulos-->
+	
 	
 	
 	<!-- contenido  -->
 	
 	<div style="padding-left: 5px;">
 	
-		<div style="padding-left: 5px">
-		<h3 class="card-header">Tabla ventas</h3>
-		<div class="container">
+		<h3 class="card-header">Lista de usuarios</h3>
+	
 			<div class="container">
 				<div class="row">
 					<!--  Aqui es donde se autogenera la tabla basado en el script -->
-					<div class="col align-self-center" id="clientesinfo">
+					<div class="col align-self-center" id="usuariosinfo">
 					
 					</div>
 	
 				</div>
 			</div>
-	
-		<center>
-			<div class="container">
-        
-				<div class="row">
-				<a href="#" class="link" onclick="window.location.href='/reporteusuarios.jsp'"><h5>lista Usuarios</h5></a>
-				</div>
-
-        <div class="row">
-				<a href="#" class="link" onclick="window.location.href='/reporteclientes.jsp'"><h5>Lista clientes</h5></a>
-		
-				</div>
-        <div class="row">
-				<a href="#" class="link" onclick="window.location.href='/reporteventas.jsp'"><h5>lista de ventas por cliente</h5></a>
-		
-				</div>
-			</div>
-			</center>
 	</div>
 
 

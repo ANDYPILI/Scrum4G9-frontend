@@ -6,10 +6,10 @@
 
 <!-- paquete de caracteres -->
 <meta charset="utf-8">
-<!-- Tamaño de la pantalla -->
+<!-- Tama�o de la pantalla -->
 <meta name="viewport" content="width=device-width">
-<!-- titulo de la pestaña -->
-<title>Lista de ventas</title>
+<!-- titulo de la pesta�a -->
+<title>Reporte ventas</title>
 <!-- bootstrap-->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -26,34 +26,33 @@
 <!-- Cargando mi hoja de estilo -->
 <link href="style.css" rel="stylesheet" type="text/css" />
 
-
 <script>
-	var baseurl = "http://localhost:8080/listarventa";
+	var baseurl = "http://localhost:8080/listarventas";
 	function loadventas() {
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", baseurl, true);
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-				var ventas = JSON.parse(xmlhttp.responseText);
-				var tbltop = "<table class='table table-dark table-striped'><tr><th>Codigo</th><th>IVA</th><th>NIT Proveedor</th><th>Nombre Producto</th><th>Precio compra</th><th>Precio venta</th></tr>";
+				var  = JSON.parse(xmlhttp.responseText);
+				var tbltop = "<table class='table table-dark table-striped'><tr><th>codigo_venta</th><th>cedula_cliente</th><th>cedula_usuario</th><th>ivaventa</th><th>total_venta</th><th>valor_venta</th></tr>";
 				var main = "";
-				for (i = 0; i < productos.length; i++) {
-					main += "<tr><td>" + productos[i].codigo_producto
-							+ "</td><td>" + productos[i].iva_compra
-							+ "</td><td>" + productos[i].nit
-							+ "</td><td>" + productos[i].nombre_producto 
-							+ "</td><td>" + productos[i].precio_compra 
-							+ "</td><td>" + productos[i].precio_venta + "</td></tr>";
+				for (i = 0; i < ventass.length; i++) {
+					main += "<tr><td>" + ventas[i].codigo_venta
+							+ "</td><td>" + ventas[i].cedula_cliente          
+							+ "</td><td>" + ventas[i].cedula_usuario
+							+ "</td><td>" + ventas[i].ivaventa
+							+ "</td><td>" + ventas[i].total_venta + "</td><td>"
+							+ ventas[i].valor_venta + "</td></tr>";
 				}
 				var tblbottom = "</table>";
 				var tbl = tbltop + main + tblbottom;
-				document.getElementById("productosinfo").innerHTML = tbl;
+				document.getElementById("ventasinfo").innerHTML = tbl;
 			}
 		};
 		xmlhttp.send();
 	}
 	window.onload = function() {
-		loadproductos();
+		loadclientes();
 	}
 </script>
 
@@ -83,42 +82,26 @@
 	</nav>
 		</div>
 	</nav>
+
+	<!-- Navbar modulos-->
+	
 	
 	
 	<!-- contenido  -->
 	
 	<div style="padding-left: 5px;">
 	
-		<div style="padding-left: 5px">
-		<h3 class="card-header">Tabla ventas</h3>
-		<div class="container">
+		<h3 class="card-header">Lista ventas por cliente</h3>
+	
 			<div class="container">
 				<div class="row">
 					<!--  Aqui es donde se autogenera la tabla basado en el script -->
-					<div class="col align-self-center" id="clientesinfo">
+					<div class="col align-self-center" id="usuariosinfo">
 					
 					</div>
 	
 				</div>
 			</div>
-	
-		<center>
-			<div class="container">
-        
-				<div class="row">
-				<a href="#" class="link" onclick="window.location.href='/reporteusuarios.jsp'"><h5>lista Usuarios</h5></a>
-				</div>
-
-        <div class="row">
-				<a href="#" class="link" onclick="window.location.href='/reporteclientes.jsp'"><h5>Lista clientes</h5></a>
-		
-				</div>
-        <div class="row">
-				<a href="#" class="link" onclick="window.location.href='/reporteventas.jsp'"><h5>lista de ventas por cliente</h5></a>
-		
-				</div>
-			</div>
-			</center>
 	</div>
 
 
